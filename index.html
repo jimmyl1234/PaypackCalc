@@ -139,7 +139,7 @@
               <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="boxesPerMinutePerPerson">Manual rate (boxes/min/person)</label>
               <input id="boxesPerMinutePerPerson" type="number" min="0.1" step="0.1"
                 class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm focus-ring dark:border-slate-800 dark:bg-slate-950" />
-              <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Default: 3</p>
+              <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Default: 2</p>
             </div>
 
             <!-- Machine labor hours/day -->
@@ -427,7 +427,7 @@
       // Warning logic
       const warnings = [];
       if (hoursPerWorkerPerDay > 10) {
-        warnings.push('Hours per worker per day look very high. Consider increasing workers, lowering boxes/day, or revisiting the 3 boxes/min assumption.');
+        warnings.push('Hours per worker per day look very high. Consider increasing workers, lowering boxes/day, or revisiting the 2 boxes/min assumption.');
       }
       if (annualSavings <= 0) {
         warnings.push('Annual savings are not positive with these assumptions, so payback may never occur.');
@@ -561,4 +561,5 @@
   </script>
 </body>
 </html>
+
 
